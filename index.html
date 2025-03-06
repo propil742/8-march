@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 марта</title>
+    <style>
+        body {
+            background-color: #f5f5dc;
+            font-family: 'arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: #4b0082;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3em;
+            animation: fadeIn 2s;
+        }
+        p {
+            font-size: 1.5em;
+            animation: slideIn 2s;
+            margin: 20px 0;
+        }
+        .flower {
+            width: 150px;
+            animation: spin 10s  infinite linear;
+        }
+        @keyframes fedeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0;}
+            to { transform: translateY(0); opacity: 1;}
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <h1>С 8 Марта, Мама!</h1>
+    <img src="https://avatars.mds.yandex.net/get-altay/3518606/2a00000178a35477828bc90a402c0bfd326a/XXL" alt="Цветы" class="flower">
+    <p>Ты — самый замечательный человек на свете!</p>
+    <p>Спасибо за твою любовь и заботу!</p>
+    <button onclick="playMusic()">Слушать поздравление</button>
+
+    <audio id="audio" src="pesnja-na-8-marta-dlja-poz.mp3" preload="auto"></audio>
+
+    <script>
+        function playMusic() {
+            const audio = document.getElementById('audio');
+            audio.play();
+            alert("С 8 Марта, мама! Ты лучшая!");
+        }
+    </script>
+</body>
+</html>
